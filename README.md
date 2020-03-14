@@ -10,13 +10,19 @@ Design
 ### Basic Design
 
 There is an endless server running on the host OS. There is also a docker image running in a container on the host os. The container provides an isolated environment, while the endless server serves to manage an explicit protocol between the host environment and the isolated environment.
-  HOST OS:
-    endless server
-    endless container
 
 The endless server manages information contained in 2 folders on the host OS and delivers that information to requests from the endless process running inside the container. The two folders it essentially manages is: Identity and Private.
 
 The docker container mounts 3 folders: Public, Cache, Pin. When content is downloaded from the IPFS network it is placed in Cache, if it is pinned permanently it is placed in Pin. Public is a folder designated for providing your own public files to the network, though all three folders' contents are available to the IPFS network. The public folder can be thought of as the folder you might put things if you want to host a site.
+
+HOST OS:
+ - endless server (manages...)
+   - Idenitity namespace
+   - Private namespace
+ - endless container (mounts...)
+   - Public namespace
+   - Cache namespace
+   - Pin namespace
 
 ### Benefits
 
