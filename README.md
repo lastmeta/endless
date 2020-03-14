@@ -20,9 +20,9 @@ HOST OS:
    - Idenitity namespace
    - Private namespace
  - endless container (mounts...)
-   - Public namespace
-   - Cache namespace
-   - Pin namespace
+   - Public namespace (permanent home for internally managed mutating systems ("sites"))
+   - Cache namespace (temporary home for externally managed mutating systems)
+   - Pin namespace (permanent home for externally managed mutating systems)
 
 ### Benefits
 
