@@ -1,13 +1,15 @@
 # The Endless Browser
 The Endless Browser is a secure IPFS browser prototype.
 
-It isolates the IPFS in a container (docker) which has limited isolation with your environment.This allows for a better web.
+It isolates the IPFS in a container (docker) which has limited isolation with your environment. This allows for a better web.
 
 ### Current Phase
 
 Design
 
 ### Basic Design
+
+![Highest Level Diagram](/assets/images/basic_design.png)
 
 There is an endless server running on the host OS. There is also a docker image running in a container on the host os. The container provides an isolated environment, while the endless server serves to manage an explicit protocol between the host environment and the isolated environment.
 
@@ -17,7 +19,7 @@ The docker container mounts 3 folders: Public, Cache, Pin. When content is downl
 
 HOST OS:
  - endless server (manages...)
-   - Idenitity namespace
+   - Identity namespace
    - Private namespace
  - endless container (mounts...)
    - Public namespace (permanent home for internally managed mutating systems ("sites"))
@@ -26,12 +28,14 @@ HOST OS:
 
 ### Vision
 
-Imagine, (merely because we tend to stick with known paradigms) that you wanted to create a website on this system: one that would authenticate the user, save perferences and details and perform some kind of logic to deliver information to the client.
+Imagine, (merely because we tend to stick with known paradigms) that you wanted to create a website on this system: one that would authenticate the user, save preferences and details and perform some kind of logic to deliver information to the client.
 
 The website would be saved to the client's machine (into the docker image of course, specifically the cache mounted folder). That is the front end UI, the backend logic and any static data that this user should always have access to. The code runs locally in the container and is, ideally, open source.
 
-Everything one system saves can be captured by nefarious code in another system therefor everything is meant to be encrypted and unlocked by keys retrieved in the Identities namespace (which is only accessable throught a very particular protocol with the endless server). In this manner client or user data is always kept on the user machine, code or system logic is also kept on the user's system and the only thing you may need to talk to an external server for is authentication and direct information transfer.
+Everything one system saves can be captured by nefarious code in another system therefor everything is meant to be encrypted and unlocked by keys retrieved in the Identities namespace (which is only accessible through a very particular protocol with the endless server). In this manner client or user data is always kept on the user machine, code or system logic is also kept on the user's system and the only thing you may need to talk to an external server for is authentication and direct information transfer.
 
 ### Benefits
 
-Code is just data; data that describes changes in data. With this design you can write code in any language that the isolated environment knows and thereby build systems much more dynamic and flexible than current webdesigned archetecture will eaily allow day. By isolating the environment where the distributed code is ran, we eliminate much of the burden placed on todays webbrowser and thereby anniahilate limitation imposed upon distributed systems by the bottleneck of the webbrowser.
+Code is just data; data that describes changes in data. With this design you can write code in any language that the isolated environment knows and thereby build systems much more dynamic and flexible than current web designed architecture will easily allow day. By isolating the environment where the distributed code is ran, we eliminate much of the burden placed on todays web browser and thereby annihilate limitation imposed upon distributed systems by the bottleneck of the web browser.
+
+As distributed computing becomes more ubiquitous, this design allows much more flexibility as it is essentially language agnostic.
