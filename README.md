@@ -1,7 +1,7 @@
 # The Endless Browser
-The Endless Browser is a secure IPFS browser prototype.
 
-It isolates the IPFS in a container (docker) which has limited isolation with your environment. This allows for a better web.
+IPFS + Docker [+ Browser]
+This allows for a better, more distributed web.
 
 ### Current Phase
 
