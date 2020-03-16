@@ -1,7 +1,10 @@
 # The Endless Browser
 
 IPFS + Docker [+ Browser]
-This allows for a better, more distributed web.
+
+### Goal
+
+A better, more distributed web.
 
 ### Current Phase
 
