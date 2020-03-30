@@ -10,6 +10,8 @@ https://github.com/ipfs/py-ipfs-http-client
 4. make demo
 transfer source code over ipfs from one endless browser image to another
 view results through mounted port via web UI
+
+5. open op ports for gui, or set up Xserver for gui.
 '''
 
 # demo code
